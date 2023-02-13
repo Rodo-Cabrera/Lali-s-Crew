@@ -158,19 +158,51 @@ footer{
 }
 
 .container__box{
-    max-width: 1100px;
+    max-width: 1110px;
     margin: auto;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
 }
 
-.box{
+.boxRPG1{
     width: 218px;
     height: 200px;
-    background: #3e4570;
-    margin: 1px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+.boxRPG{
+  position: absolute;
+  width: 218px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 300ms ease;
+  background-size: cover;
+  background-image: url(../img/RPG.jpg);
+  filter: blur(5px);
+}
+
+.boxRPG1:hover .boxRPG{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxFPS{
+    width: 218px;
+    height: 200px; 
+    margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,50 +210,222 @@ footer{
     cursor: pointer;
     transition: all 300ms ease;
     position: relative;
+    background-size: cover;
+    background-image: url(../img/FPS.jpg);
+    filter: blur(5px);
 }
 
-.box:hover{
+
+.boxFPS:hover{
+    filter: blur(0px);
     transform: scale(1.1);
     box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    background: #56004c;
+    z-index: 1;
+    border: #15ff00 solid 2px;
+}
+.boxAdv{
+    width: 218px;
+    height: 200px;  
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/ADVe.jpg);
+    filter: blur(5px);
+}
+
+.boxAdv:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxPlat{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/Plat.jpg);
+    filter: blur(5px);
+}
+
+.boxPlat:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxRet{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/Ret.jpg);
+    filter: blur(5px);
+
+}
+
+.boxRet:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxMOBA{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/MOBA.jpeg);
+    filter: blur(5px);
+}
+
+.boxMOBA:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxMMO{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/Lineage.jpg);
+    filter: blur(5px);
+}
+
+.boxMMO:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxSouls{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size:cover;
+    background-image: url(../img/Souls2.jpg);
+    filter: blur(5px);
+}
+
+.boxSouls:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxOtr{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/Otros.jpg);
+    filter: blur(5px);
+}
+
+.boxOtr:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
+    z-index: 1;
+}
+.boxCoop{
+    width: 218px;
+    height: 200px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    background-size: cover;
+    background-image: url(../img/Coop3.jpg);
+    filter: blur(5px);
+}
+
+.boxCoop:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    border: #15ff00 solid 2px;
     z-index: 1;
 }
 
-.box i{
-    font-size: 60px;
-    color: #0c00e9;
-}
+.cardText {
+    width: 218px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: none;
+    color: deeppink;
+    z-index: 2;
+  }
 
-.box:hover i{
-    color: #fff;
-}
-
-.box h5{
-    margin-top: 20px;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #777777;
-}
-
-.box:hover h5{
-    color: #fff;
-    opacity: 0;
-}
-
-.box h4{
-    text-transform: uppercase;
-    font-size: 18px;
-    color: #fff;
-    position: absolute;
-    bottom: 50px;
-    filter: blur(5px);
-    opacity: 1;
-}
-
-.box:hover h4{
-    font-size: 14px;
-    opacity: 1;
-    filter: blur(0px);
-    color: #fff;
+  .cardText:hover {
+    transform: scale(1.5);
     transition: all 600ms ease;
-}
+  }
