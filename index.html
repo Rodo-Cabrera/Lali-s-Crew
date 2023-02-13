@@ -11,7 +11,7 @@
 <body>
   <header>
     <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-      <div class="container">
+      <div class="container navInner">
         <a href="#" class="navbar-brand">
           <img class="navLogo" src="./Logo/Logo.png" alt="team logo">
         </a>
@@ -47,19 +47,60 @@
         </div>
       </div>
     </nav>
-    <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
-      <div class="content text-center">
-        <a href="#">
-          <img class="fadeInDown" src="./Logo/logo-4621ed90bffdda5eee072109c23e7135.png" alt="main game">
-        </a>
+  </header>
+  <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center container-fluid">
+    <div id="carouselExample" class="carousel slide fadeInDown">
+      <div class="carousel-inner container text-center justify-content-center">
+    <div class="carousel-item active">
+      <img class="d-block mx-auto" src="./Logo/logo-4621ed90bffdda5eee072109c23e7135.png" alt="main game">
+    </div>
+    <div class="carousel-item">
+      <div class="container-fluid justify-content-between">
+        <div class="justify-content-between">
+          <img class="d-block me-auto deluxeEdition" src="./img/HGL blur.png" alt="main game">
+        </div>
+          <div class="carousel-caption d-none d-md-block">
+            <div class="hCaption">
+              <h5 class="text-white d-block ms-auto">Todos sabemos que Hogwarts Legacy, el nuevo juego de Portkey Games es la sensación del momento</h5> 
+              <p class="text-white d-block ms-auto">
+                Por eso en Lali's Crew te ofrecemos la edición deluxe, con la que podrás acceder al juego con 72 horas de anticipación con una oferta especial. <hr> Solo durante las próximas 48 horas te hacemos un descuento del 10% sobre el precio en pesos argentinos! <hr> Recorda que el precio del producto se basa en el precio del dólar oficial en nuestro país más un 75% (Dolar oficial * 1.75).
+                <a href="#">Ver más...</a>
+              </p>      
+            </div>
+        </div>
       </div>
     </div>
-  </header>
+    <div class="carousel-item">
+      <div class="container-fluid justify-content-between">
+        <img src="./img/avada kedavra.png" class="d-block me-auto avadaKedavra" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+          <div class="hCaption3">
+            <h5 class="text-white d-block ms-auto">Hogwarts Legacy es un RPG de acción en un mundo abierto ambientado en el universo de los libros de Harry Potter. Por primera vez, disfruta de Hogwarts en el siglo XIX. Tu personaje es un estudiante que tiene la clave de un antiguo secreto que amenaza con destruir el mundo mágico. Ahora puedes tomar el control de la acción y ser el centro de tu propia aventura en el mundo mágico. La leyenda de Hogwarts es tuya. Crea tu propio legado. </h5> 
+          </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev me-auto" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next ms-auto" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+    <!-- <div class="content text-center">
+      <a href="#">
+        <img class="fadeInDown" src="./Logo/logo-4621ed90bffdda5eee072109c23e7135.png" alt="main game">
+      </a>
+    </div> -->
   <div class="modal fade text-black fw-semibold" id="suscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Suscribirse</h1>
+          <h1 class="modal-title fs-4" id="exampleModalLabel">Suscribirse</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -123,21 +164,59 @@
       </div>
     </div>
   </div>
-  <main>
-    <div class="container my-0 d-grid gap-5">
-      <div class="p-5 border">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque animi quod quis odit, voluptatum repellat! Ex, recusandae inventore. Perspiciatis sequi soluta dicta et voluptatum cum debitis eaque. Quas, esse?</p>
-      </div>
-      <div class="p-5 border">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque animi quod quis odit, voluptatum repellat! Ex, recusandae inventore. Perspiciatis sequi soluta dicta et voluptatum cum debitis eaque. Quas, esse?</p>
-      </div>
-      <div class="p-5 border">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque animi quod quis odit, voluptatum repellat! Ex, recusandae inventore. Perspiciatis sequi soluta dicta et voluptatum cum debitis eaque. Quas, esse?</p>
-      </div>
-      <div class="p-5 border">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque animi quod quis odit, voluptatum repellat! Ex, recusandae inventore. Perspiciatis sequi soluta dicta et voluptatum cum debitis eaque. Quas, esse?</p>
-      </div>
-    </div>
+  <main class="py-5">
+     <div class="container__box">
+            <div class="box">
+                <i class="lni lni-amazon"></i>
+                <h5>RPG</h5>
+                <h4>RPG</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-spotify"></i>
+                <h5>FPS</h5>
+                <h4>FPS</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-app-store"></i>
+                <h5>Adventure</h5>
+                <h4>Adventure</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-behance"></i>
+                <h5>Plataforma</h5>
+                <h4>Plataforma</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-chrome"></i>
+                <h5>Retro</h5>
+                <h4>Retro</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-css3"></i>
+                <h5>MOBA</h5>
+                <h4>MOBA</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-html5"></i>
+                <h5>MMORPG</h5>
+                <h4>MMORPG</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-github"></i>
+                <h5>Cooperativo Online</h5>
+                <h4>Cooperativo Online</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-paypal"></i>
+                <h5>Souls-Like</h5>
+                <h4>Souls-Like</h4>
+            </div>
+            <div class="box">
+                <i class="lni lni-play-store"></i>
+                <h5>Otros</h5>
+                <h4>Otros</h4>
+            </div>
+        </div>
   </main>
     <footer class="mt-0">
     <div class="container-fluid">
