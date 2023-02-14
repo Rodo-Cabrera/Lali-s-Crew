@@ -1,0 +1,73 @@
+body{
+  font-family: 'Oswald', sans-serif;
+}
+.bodyLogin{
+  background-image: url('https://static.nationalgeographicla.com/files/styles/image_3200/public/hubble-13-ngc-1300-barred-spiral-galaxy-1920_0.jpg?w=1600');
+  background-size: cover;
+  padding: none;
+  background-attachment: fixed;
+
+}
+/* .loginImg{
+  background-image: url('https://static01.nyt.com/images/2022/10/25/science/19sci-webb-pillars-01/19sci-webb-pillars-01-superJumbo.jpg?quality=75&auto=webp');
+  background-size: cover;
+  box-shadow: 0 0 20px rgba(255, 254, 254, 0.89);
+
+} */
+
+.formulario {
+  background: rgba(255, 255, 255, 0.394);
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(255, 254, 254, 0.89);
+  border-radius: 3%;
+}
+.formulario2 {
+  background: rgba(255, 255, 255, 0.87);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(238, 236, 236, 0.979);
+}
+
+/* ICONS EFECT */
+.icons:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.3, 1.3, 1.3);
+  transform: scale3d(1.3, 1.3, 1.3);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.3, 1.3, 1.3);
+  transform: scale3d(1.3, 1.3, 1.3);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+} 
+/* FOOTER */
+footer{
+background-image:url('https://t3.ftcdn.net/jpg/01/36/05/94/360_F_136059498_i1vEZZYQJFz4oUKMLnTRHkkQwLEaYSQ6.jpg');
+background-size:cover;
+font-family: 'Oswald', sans-serif;
+}
