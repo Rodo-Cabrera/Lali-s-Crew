@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/LogosinBR.png">
+  <title>login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Styles/styleLogin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="bodyLogin container-fluid justify-content-evenly ">
+      <div class="row justify-content-evenly ">
+        <div class="card formulario col-lg-4 col-sm-10 col-md-7 py-3 m-5">
+          <div class="card-body ">
+            <div class="text-center icons">
+              <a href="./index.html"><img src="./img/LogoMRcode.png" width="350" alt="logo"></a>
+            </div>
+            <h2 class="text-center display-4 fw-bold py-3"> Login <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg></h2>
+            <!-- FORM -->
+            <form name="login">
+              <div class="mb-4">
+                <input type="email" class="form-control" required maxlength="50" minlength="6" placeholder="Nombre de usuario" name="usuario" value="">
+              </div>
+              <div class="mb-4">
+                <div class="mb-4">
+                  <input type="password" class="form-control" required maxlength="15" minlength="6" placeholder="Password" name="contraseña" value="">
+                </div>
+              </div>
+              <div class="mb-4 form-check">
+                <input class="form-check-input" type="checkbox" id="conected" checked>
+                <label class="form-check-label" for="conected">
+                  Recordar nombre de usuario
+                </label>
+              </div>
+              <div class="d-grid">
+                <button type="button" class="btn btn-primary" onclick="loginUser()" target="_parent" value="Acceder">Acceder</button>
+              </div>
+              <div class="my-3 text-center fs-4 fw-bold">
+                <span>No tienes cuenta? <a href="./error.html">Registrate</a></span><br>
+                    <!-- Button trigger modal -->
+                <button type="button" class="btn btn-secondary fs-6 fw-bold text-decoration-none text-darkblue" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <span class=" ">¿Olvidó su nombre de usuario o contraseña?</span> 
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content formulario2">
+                      <button type="button" class="btn-close align-self-end p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <div class="modal-header text-center align-self-center">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                          <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                        </svg></h1>
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">¿Olvidaste tu contraseña?</h1>
+                        
+                      </div>
+                      <div class="modal-body">
+                        <h6 class="py-3">Introduce el Email con el que accedes a tu cuenta. <br>
+                           En unos minutos recibiras en esa misma cuenta de correo <br>
+                          un mail para realizar el cambio de contraseña</h6>
+                        <div class="input-group mb-3 py-3">
+                          <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                          </svg></span>
+                          <input type="email" class="form-control" required maxlength="50" minlength="6"  placeholder="Escribe tu Email (ej: cine@gmail.com)" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="d-grid pb-3">
+                          <a href="./error.html"><button type="button" class="btn btn-primary">ENVIAR EMAIL</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="container w-100 my-3">
+              <div class="row text-center my-3">
+                <div class="col-12 fw-bold">Iniciar sesion con</div>
+              </div>
+              <div class="row">
+                <div class=" col-sm-11 col-md-11 col-lg-6">
+                  <a href="./error.html">
+                    <button class="btn btn-primary w-100 my-1">
+                      <div class="row align-items-center">
+                       <div class="col-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                           <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                         </svg>
+                       </div>
+                       <div class="col-10 text-center">
+                         Facebook
+                       </div>
+                      </div>
+                   </button>
+                  </a>
+                </div>
+                <div class=" col-sm-11 col-md-11 col-lg-6">
+                  <a href="./error.html">
+                    <button class="btn btn-danger w-100 my-1">
+                      <div class="row align-items-center">
+                       <div class="col-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                          <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                        </svg>
+                       </div>
+                       <div class="col-10 text-center">
+                         Google
+                       </div>
+                      </div>
+                   </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card formulario col-lg-4 col-sm-10 col-md-7 py-5 m-3">
+          <div class="card card-body loginImg">
+          </div>
+        </div> -->
+        
+      </div>
+    </div>
+  </main>
+  <footer>
+    <section class="container-fluid ">
+      <div class="row justify-content-evenly ">
+        <div class="col-sm-11 col-md-6 col-lg-3 align-self-center ">
+          <div class="d-flex justify-content-center p-5 ">
+            <img src="./img/LogoMRcode.png" class="w-100 imgCard"  alt="LogoBR">
+          </div>
+        </div>
+        
+        <div class="col-sm-11 col-md-6 col-lg-3">
+          <h3 class="fs-6 fw-bold text-start pt-3 text-muted">CONTACTO
+          <hr>
+          <h5 class="fs-6 text-start text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>General Paz, 574 <br>San Miguel de Tucumán</h5>
+          <hr>
+          <p class="fs-6 text-start text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+          </svg>  (+54) 381 .... ...</p>
+          <hr>
+          <p class="fs-6 text-start text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+          </svg>contact@rollingdev.com</p>
+        </div>
+        <div class="col-sm-11 col-md-8 col-lg-3 align-self-center">
+          <div class="d-flex justify-content-evenly pt-5">
+            <a class="icons mx-2" href="https://www.facebook.com/" ><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-facebook text-black p-1  " viewBox="0 0 16 16" >
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></i></a>
+            <a class="icons mx-2" href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-instagram text-black p-1" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg></a> 
+            <a class="icons mx-2" href="https://www.twitter.com/"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-twitter text-black p-1" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg></a>
+          </div>
+          <div class="d-flex flex-column justify-content-evenly p-5">
+            <a href="./error.html" class="text-decoration-none icons"><h5 class="fs-6 text-center text-muted ">Terminos y condiciones</h5></a>
+            <hr>
+            <a href="./error.html" class="text-decoration-none icons"><h5 class="fs-6 text-center text-muted text-decoration-none">Politicas</h5></a>
+          </div>
+        </div>
+        <div class="col-12 justify-content-evenly text-muted">
+          <p class="text-center"><i>© Derechos reservados - MR CODE 2023</i></p>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="./js/appLogin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
