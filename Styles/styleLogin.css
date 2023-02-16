@@ -2,6 +2,7 @@ body{
   font-family: 'Oswald', sans-serif;
 }
 .bodyLogin{
+
   background-image: url('../Background/BG\ MainWLogo.jpg');
   opacity: 80%;
   background-size: cover;
@@ -62,6 +63,7 @@ body{
 } 
 /* FOOTER */
 footer{
+
   background: #2f3557;
   border-top: white 2px;
 }
@@ -145,3 +147,4 @@ footer{
     transform-origin:bottom left;
   }
   
+

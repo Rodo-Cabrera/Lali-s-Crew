@@ -2,6 +2,7 @@
   background-image: url("../Background/HG\ Legacy.jpg");
   background-size: cover;
 }
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 .navLogo{
   width: 4rem ;
@@ -182,10 +183,6 @@ footer{
   position: absolute;
   width: 218px;
   height: 200px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   transition: all 300ms ease;
   background-size: cover;
   background-image: url(../img/RPG.jpg);
@@ -199,217 +196,269 @@ footer{
     border: #15ff00 solid 2px;
     z-index: 1;
 }
+.boxFPS1{
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
 .boxFPS{
-    width: 218px;
-    height: 200px; 
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/FPS.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/FPS.jpg);
+filter: blur(5px);
 }
 
-
-.boxFPS:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    z-index: 1;
-    border: #15ff00 solid 2px;
+.boxFPS1:hover .boxFPS{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+.boxAdv1{
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxAdv{
-    width: 218px;
-    height: 200px;  
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/ADVe.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/ADVe.jpg);
+filter: blur(5px);
 }
 
-.boxAdv:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxAdv1:hover .boxAdv{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+.boxPlat1{
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxPlat{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/Plat.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/Plat.jpg);
+filter: blur(5px);
 }
 
-.boxPlat:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxPlat1:hover .boxPlat{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+.boxRet1{
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxRet{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/Ret.jpg);
-    filter: blur(5px);
-
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/Ret.jpg);
+filter: blur(5px);
 }
 
-.boxRet:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxRet1:hover .boxRet{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+
+.boxMOBA1 {
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxMOBA{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/MOBA.jpeg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/MOBA.jpeg);
+filter: blur(5px);
 }
 
-.boxMOBA:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxMOBA1:hover .boxMOBA{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+
+.boxMMO1 {
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxMMO{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/Lineage.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/Lineage.jpg);
+filter: blur(5px);
 }
 
-.boxMMO:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxMMO1:hover .boxMMO{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+
+
+.boxSouls1 {
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxSouls{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size:cover;
-    background-image: url(../img/Souls2.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/Souls2.jpg);
+filter: blur(5px);
 }
 
-.boxSouls:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxSouls1:hover .boxSouls{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+
+.boxOtr1 {
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxOtr{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/Otros.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/Otros.jpg);
+filter: blur(5px);
 }
 
-.boxOtr:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxOtr1:hover .boxOtr{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
+}
+
+
+.boxCoop1 {
+  width: 218px;
+  height: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 .boxCoop{
-    width: 218px;
-    height: 200px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 300ms ease;
-    position: relative;
-    background-size: cover;
-    background-image: url(../img/Coop3.jpg);
-    filter: blur(5px);
+position:absolute;
+width: 218px;
+height: 200px;
+transition: all 300ms ease;
+background-size: cover;
+background-image: url(../img/Coop3.jpg);
+filter: blur(5px);
 }
 
-.boxCoop:hover{
-    filter: blur(0px);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
-    border: #15ff00 solid 2px;
-    z-index: 1;
+.boxCoop1:hover .boxCoop{
+  filter: blur(0px);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+  border: #15ff00 solid 2px;
+  z-index: 1;
 }
 
-.cardText {
+
+.cardText h2 {
+    font-family: 'Righteous';
     width: 218px;
     height: 200px;
     position: relative;
@@ -421,11 +470,12 @@ footer{
     align-items: center;
     justify-content: center;
     filter: none;
-    color: deeppink;
+    color: rgb(255, 191, 0);
     z-index: 2;
   }
 
-  .cardText:hover {
-    transform: scale(1.5);
+  .cardText h2:hover {
+    transform: scale(1.2);
     transition: all 600ms ease;
+    opacity: 40% ;
   }
