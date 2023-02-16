@@ -2,18 +2,14 @@ body{
   font-family: 'Oswald', sans-serif;
 }
 .bodyLogin{
-  background-image: url('https://static.nationalgeographicla.com/files/styles/image_3200/public/hubble-13-ngc-1300-barred-spiral-galaxy-1920_0.jpg?w=1600');
+
+  background-image: url('../Background/BG\ MainWLogo.jpg');
+  opacity: 80%;
   background-size: cover;
   padding: none;
   background-attachment: fixed;
 
 }
-/* .loginImg{
-  background-image: url('https://static01.nyt.com/images/2022/10/25/science/19sci-webb-pillars-01/19sci-webb-pillars-01-superJumbo.jpg?quality=75&auto=webp');
-  background-size: cover;
-  box-shadow: 0 0 20px rgba(255, 254, 254, 0.89);
-
-} */
 
 .formulario {
   background: rgba(255, 255, 255, 0.394);
@@ -67,7 +63,88 @@ body{
 } 
 /* FOOTER */
 footer{
-background-image:url('https://t3.ftcdn.net/jpg/01/36/05/94/360_F_136059498_i1vEZZYQJFz4oUKMLnTRHkkQwLEaYSQ6.jpg');
-background-size:cover;
-font-family: 'Oswald', sans-serif;
+
+  background: #2f3557;
+  border-top: white 2px;
 }
+
+.logors:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.55, 1.55, 1.55);
+  transform: scale3d(1.55, 1.55, 1.55);
+  }
+  100% {
+  -webkit-transform: scale3d(1.55, 1.55, 1.55);
+  transform: scale3d(1.55, 1.55, 1.55);
+  }
+  } 
+
+  .logoFooter{
+    margin-top: 6rem;
+  }
+
+  /* NAVBAR */
+
+  .navLogo{
+    width: 9rem ;
+    height: 9rem;
+    margin: 1px, 0px, 1px, 0px;
+  }
+  
+  .regBtn{
+    padding: 1px;
+    border-radius: 2rem;
+    align-items: center;
+    background-color: #3e4570;
+  }
+  
+  .underline {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0px;
+    left: 0;
+    background-color: #3e4570;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .underline:hover::after {
+    transform: scaleX(1);
+    transform-origin:bottom left;
+  }
+  
+
