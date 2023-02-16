@@ -457,7 +457,7 @@ filter: blur(5px);
 }
 
 
-.cardText h1 {
+.cardText h2 {
     font-family: 'Righteous';
     width: 218px;
     height: 200px;
@@ -474,7 +474,8 @@ filter: blur(5px);
     z-index: 2;
   }
 
-  .cardText h1:hover {
+  .cardText h2:hover {
     transform: scale(1.2);
     transition: all 600ms ease;
+    opacity: 40% ;
   }
