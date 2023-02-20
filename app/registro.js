@@ -8,21 +8,22 @@ const registrarUsuario = (e) => {
   if(nombre.value === "" ||
     email.value === "" ||
     contraseña.value === "")
-  {alert("Conpletar campos vacíos");
+  {alert("Completar campos vacíos");
 } 
 }
 
 
 
 const guardarEnDb = () => {
-  const guardarRegEx = "";
+  let guardarRegEx = "";
 
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/profile', {
       method: 'POST',
       body: JSON.stringify({
-        nombreDeUsuario: document.reg.nombre.value.toLowerCase(),
+        name: document.reg.nombre.value.toLowerCase(),
+        lastName: "",
         email: document.reg.email.value.toLowerCase(),
-        contraseña: document.reg.password.value.toLowerCase()
+        password: document.reg.password.value.toLowerCase(),
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
