@@ -38,11 +38,12 @@ const guardarEnDb = () => {
       title: "Bienvenido!",
       text: "Ya te encuentras registrado!",
       icon: "success",
+      timer:5000,
       button: "Regresar al inicio de sesión",
     });
   setTimeout(() => {
     Window.location = `#`;
-    }, 3000);
+    }, 5000);
 
   };
     
