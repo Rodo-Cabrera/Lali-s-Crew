@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Styles/styleNosotros.css">
-    <title>About Us</title>
+    <link rel="stylesheet" href="./Styles/styleContacto.css">
+    <title>Contacto</title>
     <link rel="icon" href="../Logo/Logo.png">
 </head>
 <body>
@@ -42,91 +42,62 @@
           </div>
         </nav>
       </header>
-      <main>
-        <div class="container-fluid text-center pt-5 mt-5">
-          <div class="titulo pt-3 mt-3">
-          <h1>Nuestro Equipo</h1>
-        </div>
-        </div>
-        <div class="container contenedor py-5 my-5 justify-content-center">
-          <div class="row cards justify-content-center">
-        <div class="card col-4">
-          <div class="face front">
-              <img src="./img/fotomatias.jpg" alt="" >
-              <h3>Matías Rosales</h3>
-          </div>
-          <div class="face back">
-              <h3>Developer</h3>
-              <p>Estudiante de Ingeniería Biomédica
-                <br>
-                27 años
-                <br>
-                <i>"Empecé en RollingCode para ampliar mis conocimientos sobre lenguajes de programación"</i>
-              </p>
-              <div class="link">
-                  <a href="./html/Error404.html" class="fa-brands fa-github fa-2x fa-x1 mx-2">
-                    <img class="figure-img img-fluid logors rounded mx-auto icon" width="20" src="./Redes/github.svg" alt="logo github">
-                  </a>         
-                  <a href="./html/Error404.html" class="fa-brands fa-linkedin fa-2x fa-x1">
-                    <img class="figure-img img-fluid logors rounded mx-auto icon" width="20" src="./Redes/linkedin.svg" alt="logo linkedin">
-                  </a>
+    <main>
+        <div class="bodyContacto container-fluid justify-content-evenly ">
+          <div class="row justify-content-evenly ">
+            <div class="col-lg-6 col-sm-11 col-md-11 py-5">
+              <div class="card formulario text-center" style="border-radius: 3%;">
+                <div class="card-body pb-0">
+                  <div class="text-center icons">
+                    <a href="./index.html"><img src="./Logo/Logo.png" width="175" alt="logo"></a>
+                  </div>
+                  <h2 class="text-center display-4 fw-bold py-3"><br> ¿En que podemos ayudarte? </h2>
+                  <!-- FORMULARIO -->
+                  <form action="#">
+                    <div class="mb-4">
+                      <input type="email" class="form-control" name="email" required maxlength="50" minlength="6"  placeholder="Correo electronico">
+                    </div>
+                    <div class="mb-4">
+                      <div class="mb-4">
+                        <textarea class="form-control" id="Textarea" rows="4" required maxlength="200" minlength="0"  placeholder="Mensaje"></textarea>
+                      </div>
+                    </div>
+                    <div class="mb-4 form-check text-start">
+                      <input class="form-check-input" type="checkbox" id="conected" checked>
+                      <label class="form-check-label" for="conected">
+                        Recordar su correo electronico
+                      </label>
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-dark">Enviar mensaje</button>
+                    </div>
+                    <div class="my-3 text-center fs-4 fw-bold">
+                      <span>No tienes cuenta? <a href="./error.html">Registrate</a></span><br>
+                    </div>
+                  </form>
+                  <div class="container w-100 my-3">
+                    <div class="row justify-content-center text-center mt-3">
+                      <div class="col-12 fw-bold fs-5 "><i>Tambien podes encontrarnos en <br>
+                      nuestras redes sociales</i></div>
+                      </div>
+                    <div class="">
+                      <div class="d-flex justify-content-evenly mt-3 p-4">
+                        <a class="icons mx-2" href="https://www.facebook.com/" ><img src="./Redes/facebook.svg" width="60" height="60" alt="logofb"></a>
+                        <a class="icons mx-2" href="https://www.instagram.com/"><img src="./Redes/instagram.svg" width="60" height="60" alt="logoig"></a> 
+                        <a class="icons mx-2" href="https://www.twitter.com/"><img src="./Redes/twitter.svg" width="60" height="60" alt="logotw"></a>
+                      </div>
+                  </div>
                 </div>
-            </div>
               </div>
-          
-  
-      <div class="card col-4">
-          <div class="face front">
-              <img src="./img/fotorodo.jpeg" alt="">
-              <h3>Rodolfo Cabrera</h3>
-          </div>
-          <div class="face back">
-              <h3>Developer</h3>
-              <p>Licenciado en enfermería
-                <br>
-                27 años
-                <br>
-                <i>"Aficionado a los videojuegos. Descubriendo una nueva pasión por la programación en RollingCode"</i>
-              </p>
-              <div class="link">
-                  <a href="./html/Error404.html" class="fa-brands fa-github fa-2x fa-x1 mx-2">
-                    <img class="figure-img img-fluid logors rounded mx-auto icon" width="20" src="./Redes/github.svg" alt="logo github">
-                  </a>         
-                  <a href="./html/Error404.html" class="fa-brands fa-linkedin fa-2x fa-x1">
-                    <img class="figure-img img-fluid logors rounded mx-auto icon" width="20" src="./Redes/linkedin.svg" alt="logo linkedin">
-                  </a>
-                </div>
+              <div class="col-lg-10 col-sm-10 col-md-10 py-2 align-self-center" >
+                <div class="col-12 fw-bold fs-5 "><i>O bien visitarnos en nuestro sitio</i></div><br>
+                  <div class="card" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14240.408879082126!2d-65.2072018!3d-26.8367009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1sen!2sar!4v1666036817107!5m2!1sen!2sar"  style="border:3%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+              </div>
             </div>
-      </div>
-  
-      <div class="card col-4">
-          <div class="face front">
-              <img src="./img/fotolali.png" alt="">
-              <h3>Laura Muriano</h3>
           </div>
-          <div class="face back">
-              <h3>Scrum Master</h3>
-              <p>Licenciada en enfermería
-                <br>
-                27 años
-                <br>
-                <i>"Inicié el curso porque quiero desempeñarme como programadora dentro del ámbito de mi profesión"</i>
-              </p>
-              <div class="link">
-                  <a href="./html/Error404.html" class="fa-brands fa-github fa-2x fa-x1 mx-2">
-                    <img class="figure-img img-fluid logors rounded mx-auto icon" width="20" src="./Redes/github.svg" alt="logo github">
-                  </a>         
-                  <a href="./html/Error404.html" class="fa-brands fa-linkedin fa-2x fa-x1">
-                    <img class="figure-img img-fluid logors rounded mx-auto icon" width="20" src="./Redes/linkedin.svg" alt="logo linkedin">
-                  </a>
-                </div>
-            
-          </div>
-      </div>
-      </div>
-    </div>
-    
- 
+        </div>
       </main>
       <footer class="mt-0">
         <div class="container-fluid">
@@ -200,6 +171,6 @@
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script src="./app/nosotros.js"></script>
+      <script src="./app/contacto.js"></script>
 </body>
 </html>
