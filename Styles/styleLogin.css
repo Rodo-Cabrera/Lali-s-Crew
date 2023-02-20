@@ -1,35 +1,57 @@
 body{
-  font-family: 'Oswald', sans-serif;
+  background-image: url(../Background/BG\ Main.jpg);
 }
-.bodyLogin{
-
-  background-image: url('../Background/BG\ MainWLogo.jpg');
-  opacity: 80%;
-  background-size: cover;
-  padding: none;
-  /* background-attachment: fixed; */
-
+.navLogo{
+  width: 6rem ;
+  height: 6rem;
+  margin: 1px, 0px, 1px, 0px;
 }
 
-.formulario {
-  background: rgba(255, 255, 255, 0.394);
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(255, 254, 254, 0.89);
-  border-radius: 3%;
+
+.underline {
+  display: inline-block;
+  position: relative;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0px;
+  left: 0;
+  background-color: #3e4570;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin:bottom left;
+}
+
+.formulario{
+  padding: 10px;
+  background-color: #3e4570aa;
+  border-radius: 1%;
+  color: rgba(245, 245, 245, 0.739);
 }
 .formulario2 {
-  position: relative;
   background: rgba(255, 255, 255, 0.87);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(238, 236, 236, 0.979);
-  z-index: 3;
+  color: black;
 }
-.modal-backdrop{
-  position: relative !important;
-  z-index: 3;
+main{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+ 
+  
 }
-
 /* ICONS EFECT */
 .icons:hover {
   -webkit-animation-name: pulse;
@@ -67,9 +89,8 @@ body{
   transform: scale3d(1, 1, 1);
   }
 } 
-/* FOOTER */
-footer{
 
+footer{
   background: #2f3557;
   border-top: white 2px;
 }
@@ -114,43 +135,4 @@ footer{
   .logoFooter{
     margin-top: 6rem;
   }
-
-  /* NAVBAR */
-
-  .navLogo{
-    width: 9rem ;
-    height: 9rem;
-    margin: 1px, 0px, 1px, 0px;
-  }
-  
-  .regBtn{
-    padding: 1px;
-    border-radius: 2rem;
-    align-items: center;
-    background-color: #3e4570;
-  }
-  
-  .underline {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .underline::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: 0px;
-    left: 0;
-    background-color: #3e4570;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .underline:hover::after {
-    transform: scaleX(1);
-    transform-origin:bottom left;
-  }
-  
 
