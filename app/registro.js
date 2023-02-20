@@ -1,3 +1,4 @@
+
 // const formulario = document.getElementsByName("reg");
 // const nombre = document.getElementsByName("nombre");
 // const email = document.getElementsByName("email");
@@ -6,6 +7,8 @@
 
 const registrarUsuario = (e) => {
   e.preventDefault();
+
+
 
   const nombreValor = document.reg.nombre.value.toLowerCase();
   const emailValor = document.reg.email.value.toLowerCase();
@@ -57,9 +60,13 @@ const guardarEnDb = () => {
   fetch('http://localhost:3000/users', {
       method: 'POST',
       body: JSON.stringify({
+ 
         nombreValor: document.reg.nombre.value.toLowerCase(),
         emailValor: document.reg.email.value.toLowerCase(),
         contrasenaValor: document.reg.password.value.toLowerCase()
+
+        
+
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
