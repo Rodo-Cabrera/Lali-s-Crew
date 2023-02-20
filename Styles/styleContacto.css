@@ -1,111 +1,6 @@
-main{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-image: url(../Background/BG\ Main.jpg);
+body{
+    background-image: url(../Background/BG\ Main.jpg);
 }
-.contenedor{
-  padding-top: 6;
-  margin-top: 8;
-  
-}
-
-  @media (max-width: 653px)  {
-    .cards {
-    width: 250px;
-}
-  }
-
-
-.titulo{
-  color: white;
-}
-
-.card {
-  position: relative;
-  width: 300px;
-  height: 350px;
-  margin: 20px;
-  background-color: transparent;
-}
-
-.card .face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: .5s;
-}
-
-.card .front {
-  transform: perspective(600px) rotateY(0deg);
-  box-shadow: 0 5px 10px #000;
-}
-
-.card .front img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card .front h3 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  line-height: 45px;
-  color: #fff;
-  background: rgba(0,0,0,.4);
-  text-align: center;
-}
-
-.card .back {
-  transform: perspective(600px) rotateY(180deg);
-  background: linear-gradient(-45deg, #f9d57a, #f6c67f, #f0a666, #e3874d, #d46a33);
-  padding: 15px;
-  color: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  box-shadow: 0 5px 10px #000;
-}
-
-.card .back .link {
-  border-top: solid 1px #f3f3f3;
-  height: 50px;
-  line-height: 50px;
-}
-
-.card .back .link a {
-  color: #f3f3f3;
-}
-
-.card .back h3 {
-  font-size: 30px;
-  margin-top: 20px;
-  letter-spacing: 2px;
-}
-
-.card .back p {
-  letter-spacing: 1px;
-} 
-
-.card:hover .front {
-  transform: perspective(600px) rotateY(180deg);
-}
-
-.card:hover .back {
-  transform: perspective(600px) rotateY(360deg);
-}
-
-
-
 .navLogo{
     width: 6rem ;
     height: 6rem;
@@ -136,7 +31,20 @@ main{
     transform-origin:bottom left;
   }
 
-
+.formulario{
+    padding: 10px;
+    background-color: #3e4570aa;
+    border-radius: 1%;
+    color: rgba(245, 245, 245, 0.739);
+}
+main{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+   
+    
+}
 /* ICONS EFECT */
 .icons:hover {
     -webkit-animation-name: pulse;
@@ -181,7 +89,6 @@ main{
   }
   
   .logors:hover {
-    cursor: pointer;
     -webkit-animation-name: pulse;
     animation-name: pulse;
     -webkit-animation-duration: 1s;
@@ -221,3 +128,5 @@ main{
     .logoFooter{
       margin-top: 6rem;
     }
+  
+  

@@ -3,15 +3,16 @@ const nombre = document.getElementsByName("nombre");
 const email = document.getElementsByName("email");
 const contraseña = document.getElementsByName("password");
 
-const registrarUsuario = (e) => {
-  e.preventDefault()
+const registrarUsuario = () => {
   if(nombre.value === "" ||
     email.value === "" ||
     contraseña.value === "")
-  {alert("Conpletar campos vacíos");
-} 
+  {alert("Completar campos vacíos");
+} else{
+  guardarEnDb();
 }
-
+  
+}
 
 
 const guardarEnDb = () => {
@@ -41,11 +42,12 @@ const guardarEnDb = () => {
       timer:5000,
       button: "Regresar al inicio de sesión",
     });
-  setTimeout(() => {
-    Window.location = `#`;
-    }, 5000);
-
-  };
+    setTimeout(() => {
+      Window.location = `#`;
+      }, 5000);
+  }
+  
+  
     
     
   

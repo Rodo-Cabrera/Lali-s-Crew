@@ -7,7 +7,7 @@ body{
   opacity: 80%;
   background-size: cover;
   padding: none;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
 }
 
@@ -18,10 +18,16 @@ body{
   border-radius: 3%;
 }
 .formulario2 {
+  position: relative;
   background: rgba(255, 255, 255, 0.87);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(238, 236, 236, 0.979);
+  z-index: 3;
+}
+.modal-backdrop{
+  position: relative !important;
+  z-index: 3;
 }
 
 /* ICONS EFECT */
