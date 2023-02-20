@@ -19,7 +19,7 @@ const registrarUsuario = () => {
 const guardarEnDb = () => {
   let guardarRegEx = "";
 
-    fetch('http://localhost:3000/profile', {
+    fetch('http://localhost:3000/users', {
       method: 'POST',
       body: JSON.stringify({
         name: document.reg.nombre.value.toLowerCase(),
