@@ -15,8 +15,8 @@
     "url": "https://github.com/Rodo-Cabrera/Lali-s-Crew/issues"
   },
   "homepage": "https://github.com/Rodo-Cabrera/Lali-s-Crew#readme",
-  "description": "",
   "dependencies": {
     "json-server": "^0.17.1"
-  }
+  },
+  "description": ""
 }
