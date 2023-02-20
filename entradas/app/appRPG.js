@@ -2,7 +2,7 @@ const nav = document.querySelector("nav");
 window.addEventListener("scroll", navShadow);
 
 function navShadow() {
-  if (window.scrollY > 500) {
+  if (window.scrollY > 150) {
     nav.classList.add("bg-dark", "shadow", "opacity-50");
   } else {
     nav.classList.remove("bg-dark", "shadow", "opacity-50");
@@ -12,7 +12,7 @@ function navShadow() {
 const loader = async () => {
   try {
     const resp = await fetch(
-      "https://api.rawg.io/api/games?key=1615093f0f64427988bd9c1e6d80c9d6&dates=2019-09-01%2C2019-09-30&platforms=18%2C1%2C7&fbclid=IwAR2UYmDaRdH0MoykyfSUdykUkkxuWJJYq1sOWa0iuzkGhoh3_DjqWLZLPPY");
+      `http://localhost:3000/games`);
     
     console.log(resp);
       
@@ -21,15 +21,12 @@ const loader = async () => {
       const data = await resp.json();
       
       let games = '';
-        data.results.forEach(game => {
+        data.forEach(game => {       
           games += `         
-          <div class="game">
-              <div class="card" style="width: 18rem;">
-                <h1>${game.name}</h1>
-                <img src="${game.background_image}" class="card-img-top  gameimg" alt="...">
-                <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
+          <div class="game" style="width: 18rem;">
+              <div class="card my-3 rounded-4" style="width: 20rem;">
+                <h2>${game.name}</h2>
+                <img src="${game.images[0]}" class="card-img-bottom  gameimg" alt="...">
             </div>
           </div>
           `;
