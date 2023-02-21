@@ -718,6 +718,24 @@
       "email": "matiasrosales@asdad",
       "password": "",
       "id": 9
+    },
+    {
+      "nombreDeUsuario": "armando",
+      "email": "armando@gmail.com",
+      "contraseña": "",
+      "id": 10
+    },
+    {
+      "nombreDeUsuario": "armando",
+      "email": "armando@gmail.com",
+      "contraseña": "",
+      "id": 11
+    },
+    {
+      "nombreDeUsuario": "matias123",
+      "email": "r.matiasssexe@gmail.com",
+      "contraseña": "",
+      "id": 12
     }
   ]
 }

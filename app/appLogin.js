@@ -14,6 +14,7 @@ const loginUser = () => {
   const userEmail = document.login.usuario.value.toLowerCase();
   const userPassword = document.login.contraseña.value.toLowerCase();
   const validationEmail =/^[^@]{1,64}@[^@]+\.[a-zA-Z]{2,}$/ ;
+  
   // entre 6 y 60 caracteres la validacion 
   // /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
   if (!validationEmail.test(userEmail)) {
@@ -27,24 +28,25 @@ const loginUser = () => {
 
    fetch('http://localhost:3000/users')
   .then( resp => resp.json())
-  .then (users => users.json())
-  .catch(err => console.error("ERROR",err.message))
-  console.log(users);
-  let userLog;
-  let flag = false;
-  users.map((user) => {
-  if (user.email.toLowerCase() === userEmail && user.contraseña.toLowerCase() === userPassword) {
+  .then (users => 
+  {
+    console.log(users);
+    let userLog;
+    let flag = false;
+    users.map((user) => {
+      console.log(user);
+      if (user.email.toLowerCase() ===userEmail && user.contraseña.toLowerCase() === userPassword) {
     flag = true;
     userLog = user;
   }
   });
   if (flag) {
    
-    swal({
-      icon: "success",
-      title: "Bienvenido!",
-    });    
-    // // alert('Bienvenido');
+    // swal({
+    //   icon: "success",
+    //   title: "Bienvenido!",
+    // });    
+    alert('Bienvenido');
     delete userLog.contraseña;
     localStorage.setItem('userLog', JSON.stringify(userLog));
     setTimeout(()=>{
@@ -53,12 +55,10 @@ const loginUser = () => {
     
     
   } else {
-    swal({
-      icon: "error",
-      title: "Usuario o contraseña incorrect!",
-    });  
-    // alert('Usuario o contraseña incorrecta');
+ 
+     alert('Usuario o contraseña incorrecta');
   };
+  });
 };
 
 
