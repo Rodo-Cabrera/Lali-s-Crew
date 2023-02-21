@@ -84,6 +84,8 @@ const guardarEnDb = () => {
       Window.location = `#`;
       }, 10000);
   }
+
+  //ya esta funcando pero no se que hacer con el tiempo ese de settimeout
   
   
     
