@@ -33,7 +33,7 @@ const loginUser = () => {
   let userLog;
   let flag = false;
   users.map((user) => {
-  if (user.email.toLowerCase() === userEmail && user.password.toLowerCase() === userPassword) {
+  if (user.email.toLowerCase() === userEmail && user.contraseña.toLowerCase() === userPassword) {
     flag = true;
     userLog = user;
   }
@@ -45,7 +45,7 @@ const loginUser = () => {
       title: "Bienvenido!",
     });    
     // // alert('Bienvenido');
-    delete userLog.password;
+    delete userLog.contraseña;
     localStorage.setItem('userLog', JSON.stringify(userLog));
     setTimeout(()=>{
       window.location = '../indexAdmin.html';
@@ -60,6 +60,8 @@ const loginUser = () => {
     // alert('Usuario o contraseña incorrecta');
   };
 };
+
+
 //lo de abajo sirve para no dejar hacer clickderecho
 // document.oncontextmenu = function () {
 //   return false;
