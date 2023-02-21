@@ -8,3 +8,21 @@ function navShadow () {
     nav.classList.remove("bg-dark", "shadow", "opacity-50");
   }
 }
+
+const logoutUser = () => {
+  localStorage.removeItem('userLog');
+  swal({
+    icon: "success",
+    title: "Acabas de cerrar sesion como administrador!",
+  });  
+  setTimeout(()=>{
+    window.location = '../login.html';
+  },3000);
+};
+
+const checkLogin = () => {
+  const userLog = JSON.parse(localStorage.getItem('userLog'));
+  if (!userLog) {
+    window.location = '../login.html';
+  }
+};
