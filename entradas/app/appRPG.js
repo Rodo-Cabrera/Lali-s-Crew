@@ -21,10 +21,11 @@ const loader = async () => {
       const data = await resp.json();
       
       let games = '';
+      let modals ='';
         data.forEach(game => {       
           games += `
           <div class="game" style="width: 18rem;">
-          <a href="${document.getElementById('modalDiv')}" data-bs-toggle="modal" data-bs-target="#myModal">
+          <a href="${document.getElementById('modalDiv')}" data-bs-toggle="modal" data-bs-target="#myModal${game.id}">
               <div class="card my-3 rounded-4" style="width: 20rem;">
                 <h2>${game.name}</h2>
                 <img src="${game.images[0]}" class="card-img-bottom  gameimg" alt="...">
@@ -32,11 +33,8 @@ const loader = async () => {
             </a>
           </div>
           `;
-        });
-        let modal = '';
-        data.forEach(game => {
-          modal += `                  
-            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          modals += `                  
+            <div class="modal fade" id="myModal${game.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -48,18 +46,23 @@ const loader = async () => {
                     <div>
                     <img src="${game.images[2]}"/>
                     <img src="${game.images[1]}"/>
-
                     </div>
                   </div>
                   <div class="modal-footer text-center">
-                   <p> Requerimientos mínimos <br> ${game.requirementsMin.so} <br> ${game.requirementsMin.processor} <br> ${game.requirementsMin.memory} <br> ${game.requirementsMin.graphics} <br> ${game.requirementsMin.directx} <br> ${game.requirementsMin.storage}</p>
+                   <p> Requerimientos mínimos <br> 
+                   ${game.requirementsMin.so} <br> 
+                   ${game.requirementsMin.processor} <br> 
+                   ${game.requirementsMin.memory} <br> 
+                   ${game.requirementsMin.graphics} <br> 
+                   ${game.requirementsMin.directx} <br> 
+                   ${game.requirementsMin.storage}</p>
                   </div>
                 </div>
               </div>
             </div>
           `
         });
-        document.getElementById('modalDiv').innerHTML=modal;
+        document.getElementById('modalDiv').innerHTML=modals;
         document.getElementById('games1').innerHTML = games;
         
       } else if (resp.status === 401) {
