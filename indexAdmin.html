@@ -65,29 +65,11 @@
                         </div>
                         <div class="text-center">
                                   <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-danger" onclick="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-danger" onclick="eliminarRegistro()">
                           Borrar juego
                         </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content  formulario2">
-                              <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">¿Desea borrar el juego? .....</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Los cambios efectuados no podran recuperarse.</p>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Guardar cambios</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <a href="./indexModificar.html"><button type="button" class="btn btn-warning"  target="_parent" value="Acceder">Modificar juego</button></a>
+                        <!-- <a href="./indexModificar.html"></a> -->
+                        <button type="button" class="btn btn-warning" onclick="modificarA()" >Modificar juego</button>
                       </div>
                     </form>
                   </div>
@@ -168,7 +150,6 @@
         </div>
       </footer>
       <script src="./app/app.js"></script>
-      <script src="./app/registro.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </body>
