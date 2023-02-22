@@ -130,3 +130,7 @@ footer{
   .logoFooter{
     margin-top: 6rem;
   }
+
+  .modal-body img {
+    width: 250px;
+  }
