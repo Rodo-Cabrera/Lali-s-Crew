@@ -83,7 +83,3 @@ const loginUser = () => {
   };
   });
 };
-
-// document.oncontextmenu = function () {
-//   return false;
-// };
