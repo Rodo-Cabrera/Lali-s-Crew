@@ -910,6 +910,30 @@
       "email": "jesus@gmail.com",
       "contraseña": "13213213213213",
       "id": 41
+    },
+    {
+      "nombreDeUsuario": "rogelio",
+      "email": "rogelio@gmail.com",
+      "contraseña": "123456789",
+      "id": 42
+    },
+    {
+      "nombreDeUsuario": "exequiel",
+      "email": "exequiel@gmail.com",
+      "contraseña": "123456",
+      "id": 43
+    },
+    {
+      "nombreDeUsuario": "riquelme32",
+      "email": "rogelio@gmail.com",
+      "contraseña": "5465465465",
+      "id": 44
+    },
+    {
+      "nombreDeUsuario": "armando",
+      "email": "jesus@gmail.com",
+      "contraseña": "123456",
+      "id": 45
     }
   ]
 }

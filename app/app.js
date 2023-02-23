@@ -11,10 +11,13 @@ function navShadow () {
 
 const logoutUser = () => {
   localStorage.removeItem('userLog');
-  swal({
-    icon: "success",
-    title: "Acabas de cerrar sesion como administrador!",
-  });  
+  Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Acabas de cerrar sesion como administrador!',
+    showConfirmButton: false,
+    timer: 3000
+  });
   setTimeout(()=>{
     window.location = '../login.html';
   },3000);
@@ -62,18 +65,22 @@ const eliminarRegistro = () => {
       .then((resp) => resp.json())
       .then((resp) => console.log(resp))
       .catch((error) => console.log(error))
-    
-        swal({
-          icon: "success",
-          title: `se ha borrado el juego ${juegoB} !`
-        });    
-        // esto de abajo no funciona hay que ver como usar el alert o hacer que funcione con modal
-        // setTimeout(()=>{
-        //   window.location = '../indexModificar.html';
-        // },4000);
-      // console.log(game);
-      // alert(game.description);
+      Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: `se ha borrado el juego ${juegoB} !`,
+        showConfirmButton: false,
+        timer: 3000
+      });  
+        
     } else {
+      Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: `No se ha encontrado el juego!`,
+        showConfirmButton: false,
+        timer: 3000
+      });  
       console.log("No se encontró el juego");
     }
   })
@@ -86,9 +93,19 @@ const eliminarRegistro = () => {
 };
 
 //con esto guardo en localhost el nombre del juego a modificar
-// falta eliminarlo una vez hecha la trampa ahrex
 const modificarA= () =>{
-
+  const juego = document.admin.adminNombre.value.toLowerCase();
+    if (juego.length < 3) {
+      Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: `El numero de caracteres es menor al permitido, ingrese bien el nombre del juego.`,
+        showConfirmButton: false,
+        timer: 3000
+      });
+      // alert('El numero de caracteres es menor al permitido, ingrese bien el nombre del juego.');
+      return;
+    }
   fetch('http://localhost:3000/games')
   .then(response => response.json())
   .then(data => {
@@ -98,10 +115,16 @@ const modificarA= () =>{
       localStorage.setItem('gameModif', JSON.stringify(game));
       console.log(game);
       window.location = '../indexModificar.html';
-      // alert(game.description);
-      
     } else {
-      console.log("No se encontró el juego");
+      Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: 'El juego ingresado no existe. Ingrese de nuevo el nombre.',
+        showConfirmButton: false,
+        timer: 3000
+      });
+      // alert('El juego ingresado no existe. Ingrese de nuevo el nombre.');
+      return;
     }
   })
   .catch(error => {
@@ -109,14 +132,13 @@ const modificarA= () =>{
   });
 
 }
-//modifica en el index modificar
+//modifica el juego en el index modificar
 const modificarB=()=>{
   const gameModif = JSON.parse(localStorage.getItem('gameModif'));
   alert(gameModif.id);
   fetch(`http://localhost:3000/games/${gameModif.id}`, {
     method: 'PATCH',
     body: JSON.stringify({
-      //si quieren agregamos mas cosas chiquis
       description: document.modi.desc.value
     }),
     headers: {
@@ -124,9 +146,17 @@ const modificarB=()=>{
     }
   })
   .then((resp) => resp.json())
-  .then((resp) => console.log(resp))
+  .then((resp) => {
+    console.log(resp);
+    Swal.fire({
+      position: 'top-center',
+      icon: 'succes',
+      title: 'La descripcion del juego se ha modificado con éxito!',
+      showConfirmButton: false,
+      timer: 3000
+    });
+  })
   .catch((error) => console.log(error))
 
 }
 
-//HACER VALIDACIONES REGEX
