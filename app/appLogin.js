@@ -11,21 +11,20 @@ function navShadow () {
 }
 
 const loginUser = () => {
-  const userEmail = document.login.usuario.value.toLowerCase();
-  const userPassword = document.login.contraseña.value.toLowerCase();
-  const validationEmail =/^[^@]{1,64}@[^@]+\.[a-zA-Z]{2,}$/ ;
   
-  // entre 6 y 60 caracteres la validacion 
-  // /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
-  if (!validationEmail.test(userEmail)) {
-    swal({
-      icon: "error",
-      title: "Formato de email incorrecto",
-    });  
-    // alert('Formato de email incorrecto');
-    return;
-  };
+    const email = document.login.usuario.value.toLowerCase();
+    const contraseña = document.login.contraseña.value.toLowerCase();
 
+    if (!email.includes('@') || !email.includes('.')) {
+      alert('Por favor, introduce un correo electrónico válido.');
+      return;
+    }
+
+    if (contraseña.length < 6) {
+      alert('La contraseña debe tener al menos 6 caracteres.');
+      return;
+    }
+    
    fetch('http://localhost:3000/users')
   .then( resp => resp.json())
   .then (users => 

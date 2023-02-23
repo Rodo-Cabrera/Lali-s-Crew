@@ -1,6 +1,28 @@
+const redirigir=()=>{
+  window.location.href="../index.html";
+      alert('Bienvenido!');
+}
 
 const guardarEnDb = () => {
+    const nombreDeUsuario = document.reg.nombre.value.toLowerCase();
+    const email = document.reg.email.value.toLowerCase();
+    const contraseña = document.reg.password.value.toLowerCase();
 
+    if (nombreDeUsuario.length < 6) {
+      alert('El nombre de usuario debe tener al menos 6 caracteres.');
+      return;
+    }
+
+    if (!email.includes('@') || !email.includes('.')) {
+      alert('Por favor, introduce un correo electrónico válido.');
+      return;
+    }
+
+    if (contraseña.length < 6) {
+      alert('La contraseña debe tener al menos 6 caracteres.');
+      return;
+    }
+  
   fetch('http://localhost:3000/users', {
       method: 'POST',
       body: JSON.stringify({
@@ -14,23 +36,13 @@ const guardarEnDb = () => {
       }
     })
     .then((resp) => resp.json())
-    .then((resp) => console.log(resp))
-    .catch((error) => console.log(error));
+    .then((resp) => {
+      redirigir();
 
-    swal( {
-      title: "Bienvenido!",
-      text: "Ya te encuentras registrado!",
-      icon: "success",
-      timer:5000,
-    });
-    setTimeout(() => {
-      window.location.href = "../index.html";
-      }, 10000);
+    })
+    .catch((error) => console.log(error))
   }
 
-  //ya esta funcando pero no se que hacer con el tiempo ese de settimeout
-  
-  
     
     
   
