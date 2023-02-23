@@ -1,5 +1,5 @@
 .banner-image {
-  background-image: url("../Background/HG\ Legacy.jpg");
+  /* background-image: url("../Background/HG\ Legacy.jpg"); */
   background-size: cover;
 }
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -130,7 +130,7 @@ footer{
     margin-top: 6rem;
   }
 
-  #carouselExample {
+  #carouselExample0, #carouselExample1 {
     width: 1500px;
     justify-content: center;
     display: block;
@@ -482,4 +482,8 @@ filter: blur(5px);
     transform: scale(1.2);
     transition: all 600ms ease;
     opacity: 40% ;
+  }
+
+  .carousel1{
+    max-width: 500px;
   }

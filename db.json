@@ -952,6 +952,22 @@
         "Por eso en Lali's Crew te ofrecemos la edición deluxe, con la que podrás acceder al juego con 72 horas de anticipación con una oferta especial. <hr> Solo durante las próximas 48 horas te hacemos un descuento del 10% sobre el precio en pesos argentinos!",
         "Recorda que el precio del producto se basa en el precio del dólar oficial en nuestro país más un 75% (Dolar oficial * 1.75)."
       ]
+    },
+    {
+      "id": 1,
+      "name": "Atomic Heart",
+      "bgImage": "https://sm.ign.com/ign_es/screenshot/default/atomic-heart-analisis_5ryu.jpg",
+      "carouselImg":[
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Atomic_Heart_logo.svg/2560px-Atomic_Heart_logo.svg.png",
+        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73206bd9-257c-4f50-b1f3-59a306e24084/dfnfp9y-dac74e8f-f4ad-45f9-9237-7d71e6818b80.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzczMjA2YmQ5LTI1N2MtNGY1MC1iMWYzLTU5YTMwNmUyNDA4NFwvZGZuZnA5eS1kYWM3NGU4Zi1mNGFkLTQ1ZjktOTIzNy03ZDcxZTY4MThiODAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HTUtjKxm5dMnsREVdA4LWKp2K0Ae5GQ105wYdBrWUzs",
+        "https://images.gamebanana.com/img/ico/sprays/63f3c5e060a35.png"
+      ],
+      "description":"Ten encuentros explosivos en un delirante y sublime mundo utópico. Adapta tu estilo de combate a cada rival, aprovecha el entorno y mejora el equipamiento para cumplir la misión. El precio de averiguar la verdad tendrás que pagarlo con sangre.",
+      "venta":[
+        " Atomic Heart, el primer videojuego de Mundfish, un estudio afincado en Chipre que se fundó en 2017 y que hoy lanza, por fin, su opera prima.",
+        "Por eso en Lali's Crew te ofrecemos la edición deluxe, con una oferta especial. <hr> Solo durante las próximas 48 horas te hacemos un descuento del 10% sobre el precio en pesos argentinos!",
+        "Recorda que el precio del producto se basa en el precio del dólar oficial en nuestro país más un 75% (Dolar oficial * 1.75)."
+      ]
     }
   ]
 }
