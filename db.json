@@ -779,5 +779,23 @@
       "contraseña": "",
       "id": 19
     }
+  ],
+  "mainGame":[
+    {
+      "id": 0,
+      "name": "Hogwarts Legacy",
+      "bgImage": "https://sm.ign.com/t/ign_es/news/h/hogwarts-l/hogwarts-legacy-developers-respond-to-controversy-around-cre_bwzu.2560.jpg",
+      "carouselImg":[
+        "https://gmedia.playstation.com/is/image/SIEPDC/hogwarts-legacy-logo-01-17mar22$en?$native--t$",
+      "https://www.gustore.cl/img/estampados/8811/8811.png",
+      "https://i.ibb.co/F8FDPmv/HGL-blur.png"
+      ],
+      "description":"Hogwarts Legacy es un RPG de acción en un mundo abierto ambientado en el universo de los libros de Harry Potter. Por primera vez, disfruta de Hogwarts en el siglo XIX. Tu personaje es un estudiante que tiene la clave de un antiguo secreto que amenaza con destruir el mundo mágico. Ahora puedes tomar el control de la acción y ser el centro de tu propia aventura en el mundo mágico. La leyenda de Hogwarts es tuya. Crea tu propio legado.",
+      "venta":[
+        "Todos sabemos que Hogwarts Legacy, el nuevo juego de Portkey Games es la sensación del momento",
+        "Por eso en Lali's Crew te ofrecemos la edición deluxe, con la que podrás acceder al juego con 72 horas de anticipación con una oferta especial. <hr> Solo durante las próximas 48 horas te hacemos un descuento del 10% sobre el precio en pesos argentinos!",
+        "Recorda que el precio del producto se basa en el precio del dólar oficial en nuestro país más un 75% (Dolar oficial * 1.75)."
+      ]
+    }
   ]
 }
