@@ -132,7 +132,7 @@ const modificarB=()=>{
 //HACER VALIDACIONES REGEX
 
 //Loader de juego principal
-const loader = async (id) => {
+const loader = async () => {
   try {
     const resp = await fetch(
       `http://localhost:3000/mainGame`);
@@ -140,77 +140,73 @@ const loader = async (id) => {
     console.log(resp);
       
     if (resp.status === 200) {
-        
+      
       const data = await resp.json();
-      const main = data.find(mainGame => mainGame.id === 0)
-      if (!main) {
-        console.log(`El juego con ID ${id} no esite`);
-        return;
-      }
-      let mainGame = '';
-      data.forEach(main =>{        
-        main.backgroundImage = `url(${main.bgImage})`
-          mainGame += `
-          <div id="banner-iamge" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center container-fluid" style="background-image: ${main.backgroundImage};">
-          
-          <div id="carouselExample${main.id}" class="carousel slide fadeInDown">
-            <div class="carousel-inner container text-center justify-content-center">
-          <div class="carousel-item active">
-            <img class="carousel1 d-block mx-auto" src="${main.carouselImg[0]}" alt="main game">
-          </div>
-          <div class="carousel-item" id="mainCarousel">
-            <div class="container-fluid justify-content-between">
-              <div class="justify-content-between">
-                <img class="d-block me-auto deluxeEdition" src="${main.carouselImg[2]}" alt="main game">
+      
+        let mainGame = '';
+        data.forEach(main => {        
+            main.backgroundImage = `url(${main.bgImage})`
+            mainGame += `
+            <div id="banner-iamge" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center container-fluid" style="background-image: ${main.backgroundImage};">
+            
+            <div id="carouselExample${main.id}" class="carousel slide fadeInDown">
+              <div class="carousel-inner container text-center justify-content-center">
+            <div class="carousel-item active">
+              <img class="carousel1 d-block mx-auto" src="${main.carouselImg[0]}" alt="main game">
+            </div>
+            <div class="carousel-item" id="mainCarousel">
+              <div class="container-fluid justify-content-between">
+                <div class="justify-content-between">
+                  <img class="d-block me-auto deluxeEdition" src="${main.carouselImg[2]}" alt="main game">
+                </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <div class="hCaption">
+                      <h5 class="text-white d-block ms-auto">${main.venta[0]}</h5> 
+                      <p class="text-white d-block ms-auto">
+                        ${main.venta[1]} <hr> ${main.venta[2]}
+                        <a href="#">Ver más...</a>
+                      </p>      
+                    </div>
+                </div>
               </div>
-                <div class="carousel-caption d-none d-md-block">
-                  <div class="hCaption">
-                    <h5 class="text-white d-block ms-auto">${main.venta[0]}</h5> 
-                    <p class="text-white d-block ms-auto">
-                      ${main.venta[1]} <hr> ${main.venta[2]}
-                      <a href="#">Ver más...</a>
-                    </p>      
+            </div>
+            <div class="carousel-item">
+              <div class="container-fluid justify-content-between">
+                <img src="${main.carouselImg[1]}" class="d-block me-auto avadaKedavra" alt="...">
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                  <div class="hCaption3">
+                    <h5 class="text-white d-block ms-auto">${main.description} </h5> 
                   </div>
               </div>
+              </div>
             </div>
+            <button class="carousel-control-prev me-auto" type="button" data-bs-target="#carouselExample${main.id}" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+            <button class="carousel-control-next ms-auto" type="button" data-bs-target="#carouselExample${main.id}" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
           </div>
-          <div class="carousel-item">
-            <div class="container-fluid justify-content-between">
-              <img src="${main.carouselImg[1]}" class="d-block me-auto avadaKedavra" alt="...">
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-                <div class="hCaption3">
-                  <h5 class="text-white d-block ms-auto">${main.description} </h5> 
-                </div>
-            </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev me-auto" type="button" data-bs-target="#carouselExample${main.id}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-          <button class="carousel-control-next ms-auto" type="button" data-bs-target="#carouselExample${main.id}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
         </div>
-      </div>
-          `
-        });
-        document.getElementById('mainGame').innerHTML=mainGame;
-        
-      } else if (resp.status === 401) {
-        console.log('Error 401');
-      } else if (resp.status === 404) {
-        console.log('El juego no existe');
-      } else {
-        console.log('ni idea loco, no conocemos este error');
-      }
-
-
-  } catch (error) {
-    console.log(error);
-  }
-};
+            `
+          });
+          document.getElementById('mainGame').innerHTML=mainGame;
+          
+        } else if (resp.status === 401) {
+          console.log('Error 401');
+        } else if (resp.status === 404) {
+          console.log('El juego no existe');
+        } else {
+          console.log('ni idea loco, no conocemos este error');
+        }
+  
+  
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 loader(0);
