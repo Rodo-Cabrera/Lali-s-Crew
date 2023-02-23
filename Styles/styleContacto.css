@@ -42,8 +42,9 @@ main{
     margin-bottom: 8rem;
     margin-left: 1rem;
     margin-right: 1rem;
-   
-    
+}
+.enviando{
+  opacity:0 ;
 }
 /* ICONS EFECT */
 .icons:hover {

@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/Rodo-Cabrera/Lali-s-Crew#readme",
   "dependencies": {
-    "json-server": "^0.17.1"
+    "json-server": "^0.17.1",
+    "sweetalert2": "^11.7.2"
   },
   "description": ""
 }
