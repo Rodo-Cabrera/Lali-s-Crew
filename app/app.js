@@ -132,7 +132,7 @@ const modificarB=()=>{
 //HACER VALIDACIONES REGEX
 
 //Loader de juego principal
-const loader = async () => {
+const loader = async (id) => {
   try {
     const resp = await fetch(
       `http://localhost:3000/mainGame`);
@@ -142,16 +142,21 @@ const loader = async () => {
     if (resp.status === 200) {
         
       const data = await resp.json();
-      
+      const main = data.find(mainGame => mainGame.id === 0)
+      if (!main) {
+        console.log(`El juego con ID ${id} no esite`);
+        return;
+      }
       let mainGame = '';
-        data.forEach(main => {       
+      data.forEach(main =>{        
+        main.backgroundImage = `url(${main.bgImage})`
           mainGame += `
-          <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center container-fluid">
+          <div id="banner-iamge" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center container-fluid" style="background-image: ${main.backgroundImage};">
           
-          <div id="carouselExample" class="carousel slide fadeInDown">
+          <div id="carouselExample${main.id}" class="carousel slide fadeInDown">
             <div class="carousel-inner container text-center justify-content-center">
           <div class="carousel-item active">
-            <img class="d-block mx-auto" src="${main.carouselImg[0]}" alt="main game">
+            <img class="carousel1 d-block mx-auto" src="${main.carouselImg[0]}" alt="main game">
           </div>
           <div class="carousel-item" id="mainCarousel">
             <div class="container-fluid justify-content-between">
@@ -162,7 +167,7 @@ const loader = async () => {
                   <div class="hCaption">
                     <h5 class="text-white d-block ms-auto">${main.venta[0]}</h5> 
                     <p class="text-white d-block ms-auto">
-                      ${main.venta[1]} <hr> ${main.venta[3]}
+                      ${main.venta[1]} <hr> ${main.venta[2]}
                       <a href="#">Ver más...</a>
                     </p>      
                   </div>
@@ -178,17 +183,17 @@ const loader = async () => {
                   <h5 class="text-white d-block ms-auto">${main.description} </h5> 
                 </div>
             </div>
+            </div>
           </div>
+          <button class="carousel-control-prev me-auto" type="button" data-bs-target="#carouselExample${main.id}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+          <button class="carousel-control-next ms-auto" type="button" data-bs-target="#carouselExample${main.id}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
-        <button class="carousel-control-prev me-auto" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next ms-auto" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
       </div>
           `
         });
@@ -208,4 +213,4 @@ const loader = async () => {
   }
 };
 
-loader();
+loader(0);
