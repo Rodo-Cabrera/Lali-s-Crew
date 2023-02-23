@@ -53,13 +53,16 @@
                   </div>
                   <h2 class="text-center display-4 fw-bold py-3"><br> ¿En que podemos ayudarte? </h2>
                   <!-- FORMULARIO -->
-                  <form action="#">
+                  <form action="" id="form" class="form">
+                    <div class="mb-4">
+                      <input type="text" class="form-control" id="name" name="name" required maxlength="50" minlength="6"  placeholder="Nombre">
+                    </div>
                     <div class="mb-4">
                       <input type="email" class="form-control" name="email" required maxlength="50" minlength="6"  placeholder="Correo electronico">
                     </div>
                     <div class="mb-4">
                       <div class="mb-4">
-                        <textarea class="form-control" id="Textarea" rows="4" required maxlength="200" minlength="0"  placeholder="Mensaje"></textarea>
+                        <textarea class="form-control" name="message" id="message" rows="4" required maxlength="200" minlength="0"  placeholder="Mensaje"></textarea>
                       </div>
                     </div>
                     <div class="mb-4 form-check text-start">
@@ -69,10 +72,12 @@
                       </label>
                     </div>
                     <div class="d-grid">
-                      <button type="submit" class="btn btn-primary btn-dark">Enviar mensaje</button>
+                      <button type="submit" class="btn btn-primary btn-dark">
+                        <a href="mailto:laliscrew@gmail.com"  id="enviando">Enviar mensaje</a></button>
                     </div>
+                    
                     <div class="my-3 text-center fs-4 fw-bold">
-                      <span>No tienes cuenta? <a href="./error.html">Registrate</a></span><br>
+                      <span>No tienes cuenta? <a href="./indexRegistro.html">Registrate</a></span><br>
                     </div>
                   </form>
                   <div class="container w-100 my-3">
